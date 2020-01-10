@@ -39,6 +39,7 @@ public class BoardManager : MonoBehaviour
         bool launched = cannon.Refresh();
         if (launched)
         {
+            GameManager.instance.TimeManager.SpeedUpTime();
             currentTargetPlatform.InitializePlatform();
             GameManager.instance.Controller.OnController();
         }
